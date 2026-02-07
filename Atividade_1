@@ -1,0 +1,38 @@
+1. Explique, com suas palavras, o que é machine learning?
+  Machine Learning é uma forma de mudarmos a maneira como "ensinamos" o computador a resolver um problema.
+  Na programação tradicional, o programador dá todas as regras: "Se o dado for X, faça Y". 
+  Porém, no Machine Learning, o programador é o mentor que fornece os exemplos e deixa o computador descobrir as próprias regras.
+  Então, em vez de escrever um código estático, você cria um algoritmo que analisa grandes volumes de dados para encontrar padrões.
+
+2. Explique o conceito de conjunto de treinamento, conjunto de validação e conjunto de teste em machine learning.
+  Quando temos um conjunto de dados, nós o separamos em três partes distintas para garantir que o modelo realmente aprenda, em vez de apenas decorar as respostas.
+    Conjunto de Treinamento (Training Set): É o material de estudo, sendo a maior parte dos seus dados. O algoritmo analisa esses dados repetidamente para encontrar padrões, pesos e correlações.
+    Uma boa analogia seria que são os exercícios do livro didático que você resolve tendo as respostas no final para conferir se aprendeu a lógica.
+    Conjunto de Validação (Validation Set): É o simulado, onde você faz o ajuste fino. Enquanto o modelo ainda está sendo treinado, você o testa periodicamente com o conjunto de validação.
+    Isso serve para escolher os melhores parâmetros "hiperparâmetros" e verificar se o modelo está sofrendo de overfitting "quando ele decora o treino, mas não sabe lidar com dados novos".
+    Conjunto de Teste (Test Set): É a prova final. Este conjunto só é apresentado ao modelo uma única vez, depois que o treinamento e os ajustes acabaram.
+    Ele serve para dar a medida real de quão bom o seu modelo é em um cenário do mundo real. Se você testar o modelo com os mesmos dados que usou para treinar, ele terá um desempenho perfeito, mas isso é ilusório.
+    É como dar a um aluno uma prova com as mesmas questões que ele acabou de copiar do quadro: ele não aprendeu a matéria, ele apenas memorizou as respostas.
+
+3. Explique como você lidaria com dados ausentes em um conjunto de dados de treinamento.
+  Eliminação (Deletion): É a solução mais rápida, mas deve ser usada com cautela para não perder informações preciosas.
+    Listwise Deletion: Remover a linha inteira se houver qualquer valor ausente.
+    Dropping Columns: Remover a coluna "feature" inteira.
+  Imputação (Imputation): Em vez de jogar os dados fora, preenchemos os vazios com estimativas estatísticas.
+    Imputação Simples (Média, Mediana ou Moda): Preencher com a média (para dados numéricos bem distribuídos) ou mediana (se houver muitos outliers). A moda é usada para dados categóricos.
+    Imputação por Valor Constante: Preencher com um valor fixo, como "Desconhecido" ou 0. Isso é comum quando a ausência do dado já é uma informação por si só.
+  Imputação Preditiva (Avançada): Aqui usamos o próprio Machine Learning para resolver o problema dos dados faltantes.
+    KNN Imputer: O algoritmo olha para os "vizinhos" mais próximos (registros similares) e usa a média deles para preencher o vazio.
+    Imputação Multivariada (Iterative Imputer): O sistema modela cada coluna com valores ausentes como uma função das outras colunas.
+
+4. O que é uma matriz de confusão e como ela é usada para avaliar o desempenho de um modelo preditivo?
+  Uma Matriz de Confusão é uma tabela quadrada usada para descrever o desempenho de um modelo de classificação em um conjunto de dados de teste, onde os valores verdadeiros são conhecidos.
+  Por exemplo, na pesquisa que atuei de diagnóstico de Doença de Chagas por meio de sinais ECG, a matriz não diz apenas se o modelo acertou ou errou;
+  ela revela como ele está errando (se ele está sendo alarmista demais ou se está deixando passar casos reais).
+  A matriz de confusão é a base para calcular as principais métricas de saúde de um modelo de Machine Learning.
+  Olhar apenas para a Acurácia (o total de acertos) pode ser perigoso, especialmente em áreas sensíveis como a saúde ou detecção de fraudes.
+  Através dela, podemos extrair Precisão, Recall e F1-Score.
+
+5. Em quais áreas (tais como construção civil, agricultura, saúde, manufatura, entre outras) você acha mais interessante aplicar algoritmos de machine learning?
+  Acredito que o Machine Learning não é apenas uma ferramenta de automação, mas uma camada de inteligência que transforma dados brutos em decisões estratégicas.
+  Considerando minha trajetória acadêmica e profissional, vejo a área de Saúde e Biotecnologia (HealthTech), como meu principal interesse para aplicar algoritmos de machine learning. 
